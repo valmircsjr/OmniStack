@@ -21,3 +21,14 @@ app.post('/users', (req, res) => {
 })
 
 app.listen(3333);
+
+/**
+ * Instalação de depenencias: yarn add <depedencia>
+ * Inicialização da apicação em dev: yarn dev (ajeitar o script no package.json)
+ * Criar frontend: yarn create react-app frontend
+ * Backend - proteger a api do backend: yarn add axios
+ * Para criar as rotas do front: yarn add react-router-dom
+ * 
+ * Mobile:
+ *  - npm install -g expo-cli
+ */

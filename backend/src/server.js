@@ -1,5 +1,8 @@
 const express = require ('express');
 const mongoose = require ('mongoose');
+const cors = require ('cors');
+const path = require ('path');
+
 
 const routes = require('./routes');
 
@@ -24,7 +27,9 @@ db.once('open', function() {
 // requ.params = Acessar route params (para edição e deleção)
 // req.body = Acessar corpo da requisição (para criação e edição)
 
+app.use(cors()) // protege nossa api de outras aplicações
 app.use(express.json());  
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads'))); // para retronar arquivos
 app.use(routes);         
 
 app.listen(3333);   

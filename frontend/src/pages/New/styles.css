@@ -1,0 +1,25 @@
+label#thumbnail {
+    margin-bottom: 20px;
+    border: 1px dashed #ddd;
+    background-size: cover;
+    cursor: pointer; 
+    height: 160px;
+    
+    /* icone da camera ficara centralizado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* input nao ira aparecer */
+label#thumbnail input {
+    display: none;
+}
+
+/* Se tiver a imagem, tiro a borda e o icone de camera */
+label#thumbnail.has-thumbnail {
+    border: 0;
+}
+label#thumbnail.has-thumbnail img {
+    display: none;
+}
